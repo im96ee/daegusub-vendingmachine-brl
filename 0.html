@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>용산역 설화명곡 방면 6-3 자판기 안내</title>
+  <title>2호선 용산역 설화명곡방향 음료 자판기 안내</title>
 
   <style>
     body {
@@ -20,8 +20,8 @@
     }
 
     .info {
-      font-size: 15px;
-      color: #555;
+      font-size: 16px;
+      color: #333;
       margin: 0 0 12px 0;
     }
 
@@ -40,7 +40,7 @@
       width: 100%;
       box-sizing: border-box;
       padding: 14px;
-      margin: 10px 0;
+      margin: 14px 0;
       font-size: 16px;
       font-weight: bold;
       border: none;
@@ -60,7 +60,27 @@
 
     .num {
       font-weight: bold;
+      background: #f2f2f2;
+      padding: 2px 6px;
+      border-radius: 4px;
       margin-right: 4px;
+    }
+
+    .logo-wrap {
+      text-align: center;
+      margin-top: 24px;
+    }
+
+    .logo-wrap img {
+      max-width: 140px;
+      width: 100%;
+      height: auto;
+    }
+
+    .logo-text {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #555;
     }
 
     /* 확대 모드 */
@@ -80,6 +100,7 @@
       font-weight: bold;
       line-height: 1.6;
       margin-bottom: 16px;
+      color: #222;
     }
 
     .large-text p {
@@ -99,13 +120,15 @@
     }
 
     .large-text .num {
-      font-size: 32px;
-      font-weight: bold;
       margin-bottom: 4px;
     }
 
     .large-text .name {
       margin-bottom: 4px;
+    }
+
+    .large-text .logo-text {
+      font-size: 24px;
     }
   </style>
 
@@ -115,9 +138,9 @@
 
       const button = document.getElementById("toggleButton");
       if (document.body.classList.contains("large-text")) {
-        button.textContent = "▶ 기본 크기로 보기";
+        button.textContent = "기본 크기로 보려면 이 버튼을 터치하세요";
       } else {
-        button.textContent = "▶ 저시력인을 위한 확대 버전";
+        button.textContent = "확대해서 보려면 이 버튼을 터치하세요";
       }
     }
   </script>
@@ -125,10 +148,10 @@
 
 <body>
 
-  <h2>용산역 설화명곡방향 자판기</h2>
+  <h2>2호선 용산역 설화명곡방향 음료 자판기</h2>
 
   <button id="toggleButton" class="btn" onclick="toggleLargeText()">
-    ▶ 저시력인을 위한 확대 버전
+    확대해서 보려면 이 버튼을 터치하세요
   </button>
 
   <p class="info">근처 승강장: 설화명곡 방향 6-3</p>
@@ -174,8 +197,13 @@
 
   <hr>
 
-  <a href="https://naver.me/xB7DoOjr" class="btn">▶ 점자 오류 제보하기</a>
-  <a href="https://www.instagram.com/do_dadot/" class="btn">▶ 제작: 두다닷 인스타그램</a>
+  <a href="https://naver.me/xB7DoOjr" class="btn">점자 오류 제보하기</a>
+  <a href="mailto:dodadot@.naver.com" class="btn">두다닷에 문의하기</a>
+
+  <div class="logo-wrap">
+    <img src="dudat-logo.png" alt="두다닷 로고">
+    <div class="logo-text">제작: 두다닷</div>
+  </div>
 
 </body>
 </html>
