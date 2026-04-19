@@ -1,145 +1,169 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>용산역 설화명곡 방면 6-3 자판기 안내</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>용산역 설화명곡 방면 6-3 자판기 안내</title>
 
-<style>
-body {
-  font-size: 18px;
-  line-height: 1.5;
-  padding: 10px;
-}
+  <style>
+    body {
+      font-size: 18px;
+      line-height: 1.5;
+      padding: 12px;
+      margin: 0;
+      word-break: keep-all;
+    }
 
-h2 {
-  font-size: 22px;
-  margin-bottom: 5px;
-}
+    h2 {
+      font-size: 22px;
+      margin: 0 0 8px 0;
+    }
 
-.info {
-  font-size: 15px;
-  color: #555;
-  margin-bottom: 10px;
-}
+    .info {
+      font-size: 15px;
+      color: #555;
+      margin: 0 0 12px 0;
+    }
 
-p {
-  margin: 4px 0;
-}
+    p {
+      margin: 6px 0;
+    }
 
-hr {
-  border: none;
-  border-top: 1px solid #ddd;
-  margin: 14px 0;
-}
+    hr {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 16px 0;
+    }
 
-/* 버튼 공통 */
-.btn {
-  display: block;
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
-  background-color: #333;
-  color: white;
-  text-decoration: none;
-  text-align: center;
-}
+    .btn {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 14px;
+      margin: 10px 0;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      text-align: center;
+      cursor: pointer;
+    }
 
-/* 확대 모드 */
-.large-text {
-  font-size: 36px;
-  font-weight: bold;
-  line-height: 1.8;
-}
+    .num,
+    .name {
+      display: inline;
+    }
 
-.large-text h2 {
-  font-size: 40px;
-}
+    /* 확대 모드 */
+    .large-text {
+      font-size: 36px;
+      font-weight: bold;
+      line-height: 1.8;
+    }
 
-.large-text .info {
-  font-size: 28px;
-}
+    .large-text h2 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
 
-.large-text .btn {
-  font-size: 28px;
-  padding: 18px;
-}
-</style>
+    .large-text .info {
+      font-size: 28px;
+      font-weight: bold;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
 
-<script>
-function toggleLargeText() {
-  document.body.classList.toggle("large-text");
-}
-</script>
+    .large-text p {
+      margin: 12px 0;
+    }
 
+    .large-text .btn {
+      font-size: 28px;
+      font-weight: bold;
+      padding: 20px;
+    }
+
+    /* 확대 모드에서만 줄나눔 */
+    .large-text .num,
+    .large-text .name {
+      display: block;
+    }
+
+    .large-text .num {
+      margin-bottom: 4px;
+    }
+  </style>
+
+  <script>
+    function toggleLargeText() {
+      document.body.classList.toggle("large-text");
+
+      const button = document.getElementById("toggleButton");
+      if (document.body.classList.contains("large-text")) {
+        button.textContent = "▶ 기본 크기로 보기";
+      } else {
+        button.textContent = "▶ 저시력인을 위한 확대 버전";
+      }
+    }
+  </script>
 </head>
 
 <body>
 
-<h2>용산역 설화명곡방향 자판기</h2>
+  <h2>용산역 설화명곡방향 자판기</h2>
 
-<button class="btn" onclick="toggleLargeText()">
-▶ 저시력인을 위한 확대 버전
-</button>
+  <button id="toggleButton" class="btn" onclick="toggleLargeText()">
+    ▶ 저시력인을 위한 확대 버전
+  </button>
 
-<div class="info">
-근처 승강장: 설화명곡 방향 6-3
-</div>
+  <p class="info">근처 승강장: 설화명곡 방향 6-3</p>
 
-<hr>
+  <hr>
 
-<p>1열 1번 데미소다 애플 캔 900원</p>
-<p>1열 2번 데미소다 복숭아 캔 900원</p>
-<p>1열 3번 데미소다 레몬 캔 900원</p>
-<p>1열 4번 오란씨 오렌지 캔 800원</p>
-<p>1열 5번 오란씨 파인애플 캔 800원</p>
-<p>1열 6번 오로나민씨 병 1000원</p>
-<p>1열 7번 포카리스웨트 페트 1800원</p>
-<p>1열 8번 마신다 생수 페트 800원</p>
-<p>1열 9번 마신다 생수 페트 800원</p>
-<p>1열 10번 마신다 생수 페트 800원</p>
+  <p><span class="num">1열 1번</span> <span class="name">데미소다 애플 캔 900원</span></p>
+  <p><span class="num">1열 2번</span> <span class="name">데미소다 복숭아 캔 900원</span></p>
+  <p><span class="num">1열 3번</span> <span class="name">데미소다 레몬 캔 900원</span></p>
+  <p><span class="num">1열 4번</span> <span class="name">오란씨 오렌지 캔 800원</span></p>
+  <p><span class="num">1열 5번</span> <span class="name">오란씨 파인애플 캔 800원</span></p>
+  <p><span class="num">1열 6번</span> <span class="name">오로나민씨 병 1000원</span></p>
+  <p><span class="num">1열 7번</span> <span class="name">포카리스웨트 페트 1800원</span></p>
+  <p><span class="num">1열 8번</span> <span class="name">마신다 생수 페트 800원</span></p>
+  <p><span class="num">1열 9번</span> <span class="name">마신다 생수 페트 800원</span></p>
+  <p><span class="num">1열 10번</span> <span class="name">마신다 생수 페트 800원</span></p>
 
-<hr>
+  <hr>
 
-<p>2열 1번 포카리스웨트 캔 1000원</p>
-<p>2열 2번 포카리스웨트 캔 1000원</p>
-<p>2열 3번 포카리스웨트 캔 1000원</p>
-<p>2열 4번 오라떼 딸기 캔 900원</p>
-<p>2열 5번 컨피던스 캔 900원</p>
-<p>2열 6번 나랑드사이다 제로 캔 800원</p>
-<p>2열 7번 나랑드사이다 제로 캔 800원</p>
-<p>2열 8번 데미소다 청포도 캔 900원</p>
-<p>2열 9번 데미소다 청포도 캔 900원</p>
-<p>2열 10번 포카리스웨트 캔 1000원</p>
+  <p><span class="num">2열 1번</span> <span class="name">포카리스웨트 캔 1000원</span></p>
+  <p><span class="num">2열 2번</span> <span class="name">포카리스웨트 캔 1000원</span></p>
+  <p><span class="num">2열 3번</span> <span class="name">포카리스웨트 캔 1000원</span></p>
+  <p><span class="num">2열 4번</span> <span class="name">오라떼 딸기 캔 900원</span></p>
+  <p><span class="num">2열 5번</span> <span class="name">컨피던스 캔 900원</span></p>
+  <p><span class="num">2열 6번</span> <span class="name">나랑드사이다 제로 캔 800원</span></p>
+  <p><span class="num">2열 7번</span> <span class="name">나랑드사이다 제로 캔 800원</span></p>
+  <p><span class="num">2열 8번</span> <span class="name">데미소다 청포도 캔 900원</span></p>
+  <p><span class="num">2열 9번</span> <span class="name">데미소다 청포도 캔 900원</span></p>
+  <p><span class="num">2열 10번</span> <span class="name">포카리스웨트 캔 1000원</span></p>
 
-<hr>
+  <hr>
 
-<p>3열 1번 디앤카페 오리지널 캔 700원</p>
-<p>3열 2번 디앤카페 오리지널 캔 700원</p>
-<p>3열 3번 디앤카페 오리지널 캔 700원</p>
-<p>3열 4번 디앤카페 오리지널 캔 700원</p>
-<p>3열 5번 디앤카페 카라멜라떼 캔 1000원</p>
-<p>3열 6번 디앤카페 카라멜라떼 캔 1000원</p>
-<p>3열 7번 디앤카페 카라멜라떼 캔 1000원</p>
-<p>3열 8번 디앤카페 카라멜라떼 캔 1000원</p>
-<p>3열 9번 데자와 로얄 밀크티 캔 900원</p>
-<p>3열 10번 데자와 로얄 밀크티 캔 900원</p>
+  <p><span class="num">3열 1번</span> <span class="name">디앤카페 오리지널 캔 700원</span></p>
+  <p><span class="num">3열 2번</span> <span class="name">디앤카페 오리지널 캔 700원</span></p>
+  <p><span class="num">3열 3번</span> <span class="name">디앤카페 오리지널 캔 700원</span></p>
+  <p><span class="num">3열 4번</span> <span class="name">디앤카페 오리지널 캔 700원</span></p>
+  <p><span class="num">3열 5번</span> <span class="name">디앤카페 카라멜라떼 캔 1000원</span></p>
+  <p><span class="num">3열 6번</span> <span class="name">디앤카페 카라멜라떼 캔 1000원</span></p>
+  <p><span class="num">3열 7번</span> <span class="name">디앤카페 카라멜라떼 캔 1000원</span></p>
+  <p><span class="num">3열 8번</span> <span class="name">디앤카페 카라멜라떼 캔 1000원</span></p>
+  <p><span class="num">3열 9번</span> <span class="name">데자와 로얄 밀크티 캔 900원</span></p>
+  <p><span class="num">3열 10번</span> <span class="name">데자와 로얄 밀크티 캔 900원</span></p>
 
-<hr>
+  <hr>
 
-<h3>오류 제보</h3>
-<a href="https://naver.me/xB7DoOjr" class="btn">
-▶ 점자 오류 제보하기
-</a>
-
-<h3>제작: 두다닷</h3>
-<a href="https://www.instagram.com/do_dadot/" class="btn">
-▶ 두다닷 인스타그램
-</a>
+  <a href="https://naver.me/xB7DoOjr" class="btn">▶ 점자 오류 제보하기</a>
+  <a href="https://www.instagram.com/do_dadot/" class="btn">▶ 제작: 두다닷 인스타그램</a>
 
 </body>
 </html>
